@@ -1,4 +1,4 @@
-hw13.json
+https://raw.githubusercontent.com/ksa75/sre-hw13/master/hw13.json
 
 
 
