@@ -31,7 +31,7 @@ def csv_to_json(csvFilePath, jsonFilePath):
                 cmp_area2.append(str(val))
     print(cmp_area1)
     print(cmp_area2)
-    print(cmp_area1 == cmp_area2)             
+    print(f"Is identical: {cmp_area1 == cmp_area2}")
           
 csvFilePath = r'calendar.csv'
 jsonFilePath = r'calendar.json'

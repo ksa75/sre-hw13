@@ -1,0 +1,364 @@
+{
+  "name": "hw13",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "860d526a-f3cf-474a-a819-eb2da7f1b0a5",
+        "options": {}
+      },
+      "id": "5a22d844-1870-46f1-bb60-cafd7ba7a84a",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        20,
+        180
+      ],
+      "webhookId": "860d526a-f3cf-474a-a819-eb2da7f1b0a5"
+    },
+    {
+      "parameters": {
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "[\"0\"]",
+              "field2": "[\"0\"]"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "94736b3c-a9fc-4ca3-97a4-071ddc506c86",
+      "name": "Compare Datasets",
+      "type": "n8n-nodes-base.compareDatasets",
+      "typeVersion": 2.2,
+      "position": [
+        -20,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "0",
+              "value": "={{ $json.year }}"
+            },
+            {
+              "name": "1",
+              "value": "={{ $json.months[0].days }}"
+            },
+            {
+              "name": "2",
+              "value": "={{ $json.months[1].days }}"
+            },
+            {
+              "name": "3",
+              "value": "={{ $json.months[2].days }}"
+            },
+            {
+              "name": "4",
+              "value": "={{ $json.months[3].days }}"
+            },
+            {
+              "name": "5",
+              "value": "={{ $json.months[4].days }}"
+            },
+            {
+              "name": "6",
+              "value": "={{ $json.months[5].days }}"
+            },
+            {
+              "name": "7",
+              "value": "={{ $json.months[6].days }}"
+            },
+            {
+              "name": "8",
+              "value": "={{ $json.months[7].days }}"
+            },
+            {
+              "name": "9",
+              "value": "={{ $json.months[8].days }}"
+            },
+            {
+              "name": "10",
+              "value": "={{ $json.months[9].days }}"
+            },
+            {
+              "name": "11",
+              "value": "={{ $json.months[10].days }}"
+            },
+            {
+              "name": "12",
+              "value": "={{ $json.months[11].days }}"
+            },
+            {
+              "name": "13",
+              "value": "={{ $json.statistic.workdays }}"
+            },
+            {
+              "name": "14",
+              "value": "={{ $json.statistic.holidays }}"
+            },
+            {
+              "name": "15",
+              "value": "={{ $json.statistic.hours40 }}"
+            },
+            {
+              "name": "16",
+              "value": "={{ $json.statistic.hours36 }}"
+            },
+            {
+              "name": "17",
+              "value": "={{ $json.statistic.hours24 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6343a083-06a1-4225-aef3-b2151e64be5f",
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "readAsString": true
+        }
+      },
+      "id": "65c06caa-4c9b-473e-9f3d-913b5203aa57",
+      "name": "Spreadsheet File",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 1,
+      "position": [
+        -300,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "0",
+              "value": "={{ $json[\"Год/Месяц\"] }}"
+            },
+            {
+              "name": "1",
+              "value": "={{ $json[\"Январь\"] }}"
+            },
+            {
+              "name": "2",
+              "value": "={{ $json[\"Февраль\"] }}"
+            },
+            {
+              "name": "3",
+              "value": "={{ $json[\"Март\"] }}"
+            },
+            {
+              "name": "4",
+              "value": "={{ $json[\"Апрель\"] }}"
+            },
+            {
+              "name": "5",
+              "value": "={{ $json[\"Май\"] }}"
+            },
+            {
+              "name": "6",
+              "value": "={{ $json[\"Июнь\"] }}"
+            },
+            {
+              "name": "7",
+              "value": "={{ $json[\"Июль\"] }}"
+            },
+            {
+              "name": "8",
+              "value": "={{ $json[\"Август\"] }}"
+            },
+            {
+              "name": "9",
+              "value": "={{ $json[\"Сентябрь\"] }}"
+            },
+            {
+              "name": "10",
+              "value": "={{ $json[\"Октябрь\"] }}"
+            },
+            {
+              "name": "11",
+              "value": "={{ $json[\"Ноябрь\"] }}"
+            },
+            {
+              "name": "12",
+              "value": "={{ $json[\"Декабрь\"] }}"
+            },
+            {
+              "name": "13",
+              "value": "={{ $json[\"Всего рабочих дней\"] }}"
+            },
+            {
+              "name": "14",
+              "value": "={{ $json[\"Всего праздничных и выходных дней\"] }}"
+            },
+            {
+              "name": "15",
+              "value": "={{ $json[\"Количество рабочих часов при 40-часовой рабочей неделе\"] }}"
+            },
+            {
+              "name": "16",
+              "value": "={{ $json[\"Количество рабочих часов при 36-часовой рабочей неделе\"] }}"
+            },
+            {
+              "name": "17",
+              "value": "={{ $json[\"Количество рабочих часов при 24-часовой рабочей неделе\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3b31c3a4-c5de-4c29-8544-171eeb9013b0",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -160,
+        140
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "53a83c0b-341f-48de-8792-663a3e42273c",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -620,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://xmlcalendar.ru/data/ru/2022/calendar.json",
+        "options": {}
+      },
+      "id": "8f4a2d2f-ba26-4949-a8d3-0341bddad639",
+      "name": "HTTP get JSON",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -440,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://xmlcalendar.ru/data/ru/2022/calendar.csv",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "dfb0edf1-9ec3-4ff7-945b-d8e6b3f04e47",
+      "name": "HTTP get CSV",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -440,
+        140
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Spreadsheet File": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "HTTP get CSV",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP get JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP get JSON": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP get CSV": {
+      "main": [
+        [
+          {
+            "node": "Spreadsheet File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "e9319a4c-8642-4c53-a3a1-509523bdb096",
+  "id": "1",
+  "meta": {
+    "instanceId": "c7a71487c531f147d042ec5936f6661d32f9ea9c6489cfae7a6a0b18f6b94ae9"
+  },
+  "tags": []
+}
