@@ -1,21 +1,6 @@
 {
-  "name": "hw13",
+  "name": "My workflow",
   "nodes": [
-    {
-      "parameters": {
-        "path": "860d526a-f3cf-474a-a819-eb2da7f1b0a5",
-        "options": {}
-      },
-      "id": "5a22d844-1870-46f1-bb60-cafd7ba7a84a",
-      "name": "Webhook",
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 1,
-      "position": [
-        20,
-        180
-      ],
-      "webhookId": "860d526a-f3cf-474a-a819-eb2da7f1b0a5"
-    },
     {
       "parameters": {
         "mergeByFields": {
@@ -28,13 +13,13 @@
         },
         "options": {}
       },
-      "id": "94736b3c-a9fc-4ca3-97a4-071ddc506c86",
+      "id": "5dd62752-5a52-4da3-9018-95856fa56477",
       "name": "Compare Datasets",
       "type": "n8n-nodes-base.compareDatasets",
       "typeVersion": 2.2,
       "position": [
-        -20,
-        400
+        700,
+        980
       ]
     },
     {
@@ -118,13 +103,13 @@
         },
         "options": {}
       },
-      "id": "6343a083-06a1-4225-aef3-b2151e64be5f",
+      "id": "cd6ec0c0-d996-4353-8c2b-eced2bdf2cf0",
       "name": "Set1",
       "type": "n8n-nodes-base.set",
       "typeVersion": 2,
       "position": [
-        -300,
-        460
+        420,
+        1040
       ]
     },
     {
@@ -134,13 +119,13 @@
           "readAsString": true
         }
       },
-      "id": "65c06caa-4c9b-473e-9f3d-913b5203aa57",
+      "id": "c13128b1-1870-4a6b-a79d-6f4c522f9d7f",
       "name": "Spreadsheet File",
       "type": "n8n-nodes-base.spreadsheetFile",
       "typeVersion": 1,
       "position": [
-        -300,
-        140
+        420,
+        720
       ]
     },
     {
@@ -224,24 +209,24 @@
         },
         "options": {}
       },
-      "id": "3b31c3a4-c5de-4c29-8544-171eeb9013b0",
+      "id": "3ee13104-3c97-49b1-8ea4-1251e5952f58",
       "name": "Set",
       "type": "n8n-nodes-base.set",
       "typeVersion": 2,
       "position": [
-        -160,
-        140
+        560,
+        720
       ]
     },
     {
       "parameters": {},
-      "id": "53a83c0b-341f-48de-8792-663a3e42273c",
+      "id": "a53351de-3ad1-49c4-9339-62836007e071",
       "name": "When clicking \"Execute Workflow\"",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -620,
-        320
+        100,
+        900
       ]
     },
     {
@@ -249,13 +234,13 @@
         "url": "http://xmlcalendar.ru/data/ru/2022/calendar.json",
         "options": {}
       },
-      "id": "8f4a2d2f-ba26-4949-a8d3-0341bddad639",
+      "id": "f178b9f7-28ee-44ac-b9e9-15a5af876d09",
       "name": "HTTP get JSON",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -440,
-        460
+        280,
+        1040
       ]
     },
     {
@@ -269,13 +254,13 @@
           }
         }
       },
-      "id": "dfb0edf1-9ec3-4ff7-945b-d8e6b3f04e47",
+      "id": "05e79b8b-8e56-410a-b975-5e9840cff1d9",
       "name": "HTTP get CSV",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -440,
-        140
+        280,
+        720
       ]
     }
   ],
@@ -355,10 +340,10 @@
   },
   "active": false,
   "settings": {},
-  "versionId": "e9319a4c-8642-4c53-a3a1-509523bdb096",
-  "id": "1",
+  "versionId": "7ab81597-e8ef-4e41-9eef-dfc21a86039b",
+  "id": "2",
   "meta": {
-    "instanceId": "c7a71487c531f147d042ec5936f6661d32f9ea9c6489cfae7a6a0b18f6b94ae9"
+    "instanceId": "5cde27e71a87036f7269203daad984f21d4805d37ae73748d4cdc39a8c2be1a0"
   },
   "tags": []
 }
